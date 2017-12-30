@@ -1,1 +1,1 @@
-# learning_c
+# I am learning c :p
