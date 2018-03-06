@@ -3,7 +3,7 @@
 
 void escape(char s[],char t[]){
     int i,j;
-    
+
     for (i=0,j=0; t[i] != '\0' ; i++,j++){
         switch (t[i]) {
             case '\n':
@@ -24,7 +24,7 @@ void escape(char s[],char t[]){
 
 void toescape(char u[],char s[]){
     int i,j;
-    
+
     for (i=0,j=0; s[i] != '\0' ; i++,j++){
         if (s[i] == '\\') {
             switch (s[++i]) {
@@ -40,7 +40,7 @@ void toescape(char u[],char s[]){
                     u[j] = s[i];
                     //j++;
                     break;
-            }   
+            }
         }
         else
             u[j] = s[i];
@@ -62,13 +62,12 @@ int fetchline(char t[], int lim) {
 
 int main() {
     char s[MAX], t[MAX], u[MAX];
-    
-    fetchline(t, MAX); 
+
+    fetchline(t, MAX);
     escape(s,t);
     toescape(u,s);
     printf("%s\n",s);
     printf("%s\n",u);
-    
     //printf("%s\n",u);
 
     return 0;
